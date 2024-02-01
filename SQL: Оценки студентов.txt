@@ -1,0 +1,7 @@
+SELECT IF(g.grade < 8, "low", s.name) AS name, g.grade, s.mark
+FROM students s
+LEFT JOIN grade g ON s.mark BETWEEN g.min_mark AND g.max_mark
+ORDER BY g.grade DESC, s.name ASC;
+
+"если есть более одного учащегося с одинаковой оценкой (1-7), упорядочите этих конкретных учащихся по их оценкам в порядке возрастания"
+Кажется тут нет смысла.

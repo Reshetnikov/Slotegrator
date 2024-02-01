@@ -1,0 +1,86 @@
+Request example
+GET /products?category=category-1&sort=name HTTP/1.1
+Host: api.market.com
+Accept: application/json
+Response example
+HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+[
+    {
+        "id": 1,
+        "name": "Example product 1",
+        "description": "Example product 1 description",
+        "image_url": "https://cdn.market.com/images/products/product_1.png",
+        "category": "category-1",
+        "favorites": false,
+        "images": ["https://cdn.market.com/images/products/product_1_1.png", "https://cdn.market.com/images/products/product_1_2.png"]
+    },
+    {
+        "id": 4,
+        "name": "Example product 4",
+        "description": "Example product 4 description",
+        "image_url": "https://cdn.market.com/images/products/product_4.png",
+        "category": "category-1",
+        "favorites": false,
+        "images": ["https://cdn.market.com/images/products/product_4_1.png", "https://cdn.market.com/images/products/product_4_2.png"]
+    },
+    ...
+]
+
+Request example
+GET /products?category=category-1&sort=name&favorites=true HTTP/1.1
+Host: api.market.com
+Accept: application/json
+Response example
+HTTP/1.1 401 Unauthorized
+
+Request example
+GET /products?category=category-1&sort=name HTTP/1.1
+Host: api.market.com
+Authorization: Bearer 2YotnFZFEjr1zCsicMWpAA
+Accept: application/json
+Response example
+HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+[
+    {
+        "id": 1,
+        "name": "Example product 1",
+        "description": "Example product 1 description",
+        "image_url": "https://cdn.market.com/images/products/product_1.png",
+        "category": "category-1",
+        "favorites": true,
+        "images": ["https://cdn.market.com/images/products/product_1_1.png", "https://cdn.market.com/images/products/product_1_2.png"]
+    },
+    {
+        "id": 4,
+        "name": "Example product 4",
+        "description": "Example product 4 description",
+        "image_url": "https://cdn.market.com/images/products/product_4.png",
+        "category": "category-1",
+        "favorites": false,
+        "images": ["https://cdn.market.com/images/products/product_4_1.png", "https://cdn.market.com/images/products/product_4_2.png"]
+    },
+    ...
+]
+
+Request example
+GET /products?category=category-1&sort=name&favorites=true HTTP/1.1
+Host: api.market.com
+Authorization: Bearer 2YotnFZFEjr1zCsicMWpAA
+Accept: application/json
+Response example
+HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+[
+    {
+        "id": 1,
+        "name": "Example product 1",
+        "description": "Example product 1 description",
+        "image_url": "https://cdn.market.com/images/products/product_1.png",
+        "category": "category-1",
+        "favorites": true,
+        "images": ["https://cdn.market.com/images/products/product_1_1.png", "https://cdn.market.com/images/products/product_1_2.png"]
+    },
+    ...
+]
